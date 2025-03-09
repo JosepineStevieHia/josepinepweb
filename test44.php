@@ -1,1 +1,1 @@
-Welcome!
+Selamat datang!
