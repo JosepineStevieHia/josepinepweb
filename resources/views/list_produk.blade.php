@@ -12,7 +12,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans antialiased">
+<body class="bg-blue-100 font-sans antialiased">
 
     <!-- Navigation -->
     <nav class="gradient-bg text-white shadow-lg">
@@ -94,6 +94,46 @@
             </div>
         </div>
     </main>
+<div class="bg-blue-50 p-6 border-b border-blue-100 mb-8">
+  <h1 class="text-center text-xl font-semibold text-blue-800">INPUT PRODUK</h1>
+</div>
+
+<div class="max-w-xl mx-auto p-6 bg-white shadow-md rounded-xl">
+  <form method="POST" action="{{ route('produk.simpan') }}">
+    @csrf
+
+    <!-- Nama -->
+    <div class="mb-6">
+      <label for="nama" class="block text-blue-700 font-semibold mb-2">Nama Produk</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama produk"
+             class="w-full px-4 py-2 rounded-xl border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400" />
+    </div>
+
+    <!-- Deskripsi -->
+    <div class="mb-6">
+      <label for="deskripsi" class="block text-blue-700 font-semibold mb-2">Deskripsi</label>
+      <textarea id="deskripsi" name="deskripsi" placeholder="Deskripsi produk" rows="4"
+                class="w-full px-4 py-2 rounded-xl border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"></textarea>
+    </div>
+
+    <!-- Harga -->
+    <div class="mb-6">
+      <label for="harga" class="block text-blue-700 font-semibold mb-2">Harga</label>
+      <div class="relative">
+        <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500 font-medium">Rp</span>
+        <input type="number" id="harga" name="harga" placeholder="0"
+               class="w-full pl-10 pr-4 py-2 rounded-xl border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400" />
+      </div>
+    </div>
+
+    <!-- Tombol -->
+    <button type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition duration-300 mt-4">
+      Simpan Produk
+    </button>
+  </form>
+</div>
+
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>&copy; 2025 WebToko. All rights reserved.</p>
